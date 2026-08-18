@@ -1,9 +1,10 @@
-import { filter } from "../commands/index.js";
+import { filter, count } from "../commands/index.js";
 import { parseFlag, logError, logHelp } from "../utils/index.js";
 import { data } from "../data/data.js";
 
 const commands = {
   filter,
+  count,
 };
 
 const args = process.argv.slice(2);
