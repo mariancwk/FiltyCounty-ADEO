@@ -1,4 +1,4 @@
-import { DataFixture } from "../../../test";
+import { DataFixture } from "../../../../test/index";
 import { FilterTest as T } from "./builder";
 
 describe("Feature: Filtering data", () => {

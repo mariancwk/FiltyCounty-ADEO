@@ -1,6 +1,6 @@
-import { filter, count } from "../commands/index.js";
-import { parseFlag, logError, logHelp } from "../utils/index.js";
-import { data } from "../data/data.js";
+import { filter, count } from "./src/commands/index.js";
+import { parseFlag, logError, logHelp } from "./src/utils/index.js";
+import { data } from "./src/infra/index.js";
 
 const commands = {
   filter,

@@ -1,4 +1,4 @@
-import { DataFixture } from "../../../test";
+import { DataFixture } from "../../../../test/index";
 import { CountTest as T } from "./builder";
 
 describe("Feature: Counting data", () => {
