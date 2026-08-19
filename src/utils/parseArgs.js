@@ -1,4 +1,4 @@
-import { logError, logWarning } from "../utils/index.js";
+import { logError, logWarning, logHelp } from "../utils/index.js";
 import { flags } from "./flags.js";
 
 export const parseFlag = (args) => {
@@ -12,6 +12,11 @@ export const parseFlag = (args) => {
 
   if (!match) {
     logError(`Invalid argument: ${arg}. Expected --<FLAG>[=<VALUE>].`);
+    logHelp(
+      `available commands : ${Object.keys(flags)
+        .map((key) => `--${key}`)
+        .join(", ")}`,
+    );
     process.exit(1);
   }
 

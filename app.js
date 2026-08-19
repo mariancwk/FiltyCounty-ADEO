@@ -2,7 +2,7 @@ import { filter, count } from "./src/commands/index.js";
 import { parseFlag, logError, logHelp } from "./src/utils/index.js";
 import { data } from "./src/infra/index.js";
 
-const commands = {
+const registery = {
   filter,
   count,
 };
@@ -10,11 +10,10 @@ const commands = {
 const args = process.argv.slice(2);
 const { flag, value } = parseFlag(args);
 
-const cmd = commands[flag];
+const cmd = registery[flag];
 
 if (!cmd) {
-  logError(`unknow command : "${flag}"`);
-  logHelp(`available commands : ${Object.keys(commands)}`);
+  logError(`Registery doesn't include command : "${flag}"`);
   process.exit(1);
 }
 
